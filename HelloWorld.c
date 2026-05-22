@@ -10,6 +10,8 @@ int main(int argc, char* argv[])
     const char messagePrefix[] = "Hello World";
     const char messageDelimiter[] = ", ";
     const char messageSuffix[] = "!";
+
+    // merge name from arg to message
     if (argc == 2)
     {
         name = argv[1];
@@ -21,12 +23,18 @@ int main(int argc, char* argv[])
             + sizeof(messageSuffix)));
         sprintf(message, "%s%s%s%s", messagePrefix, messageDelimiter, name, messageSuffix);
     }
+    // make a default message
     else
     {
         message = (char*)malloc(sizeof(char) * (sizeof(messagePrefix) + sizeof(messageSuffix)));
         sprintf(message, "%s%s", messagePrefix, messageSuffix);
     }
     printf("%s\n", message);
+
+    // free the message
+    if (message != NULL)
+    {
+        free(message);
+    }
     return EXIT_SUCCESS;    
 }
-
