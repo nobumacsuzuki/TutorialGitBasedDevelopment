@@ -13,8 +13,6 @@ int main(int argc, char* argv[])
     const char messageDelimiter[] = ", ";
     const char messageSuffix[] = "!";
 
-    // test conflict 2
-
     // merge name from arg to message
     if (argc == 2)
     {
