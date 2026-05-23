@@ -5,6 +5,8 @@
 
 int main(int argc, char* argv[])
 {
+    // test conflict 1
+
     char *name = NULL;
     char* message = NULL;
     const char messagePrefix[] = "Hello World";
