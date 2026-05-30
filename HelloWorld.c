@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
     const char messageSuffix[] = "!";
 
     // merge name from arg to message
-    if (argc == 2)
+    if (argc >= 2)
     {
         name = argv[1];
         size_t nameLength = strlen(name);
